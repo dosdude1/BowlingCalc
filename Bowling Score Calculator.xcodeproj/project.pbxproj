@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		873651881E7EF62400D60210 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 873651871E7EF62400D60210 /* sphere.png */; };
+		873651941E7F03DF00D60210 /* popview_wood_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 873651911E7F03DF00D60210 /* popview_wood_texture.png */; };
+		873651991E7F14E800D60210 /* NavBar-Wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 873651971E7F14E800D60210 /* NavBar-Wood.png */; };
+		8736519A1E7F14E800D60210 /* NavBar-Wood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 873651981E7F14E800D60210 /* NavBar-Wood@2x.png */; };
+		873BD7B11E7D973D008BDFE1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 873BD7B01E7D973D008BDFE1 /* Game.m */; };
+		873BD7B31E7E3DBD008BDFE1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873BD7B21E7E3DBD008BDFE1 /* Media.xcassets */; };
+		874175BA1E7CAC2B0087D8AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175B91E7CAC2B0087D8AC /* Foundation.framework */; };
+		874175BC1E7CAC2B0087D8AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175BB1E7CAC2B0087D8AC /* CoreGraphics.framework */; };
+		874175BE1E7CAC2B0087D8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175BD1E7CAC2B0087D8AC /* UIKit.framework */; };
+		874175C41E7CAC2B0087D8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 874175C21E7CAC2B0087D8AC /* InfoPlist.strings */; };
+		874175C61E7CAC2B0087D8AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 874175C51E7CAC2B0087D8AC /* main.m */; };
+		874175CA1E7CAC2B0087D8AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 874175C91E7CAC2B0087D8AC /* AppDelegate.m */; };
+		874175CD1E7CAC2B0087D8AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874175CB1E7CAC2B0087D8AC /* Main.storyboard */; };
+		874175D91E7CAC2B0087D8AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175D81E7CAC2B0087D8AC /* XCTest.framework */; };
+		874175DA1E7CAC2B0087D8AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175B91E7CAC2B0087D8AC /* Foundation.framework */; };
+		874175DB1E7CAC2B0087D8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874175BD1E7CAC2B0087D8AC /* UIKit.framework */; };
+		874175E31E7CAC2B0087D8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 874175E11E7CAC2B0087D8AC /* InfoPlist.strings */; };
+		874175E51E7CAC2B0087D8AC /* Bowling_Score_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 874175E41E7CAC2B0087D8AC /* Bowling_Score_CalculatorTests.m */; };
+		874175F51E7CB8CF0087D8AC /* BowlingScoreTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 874175F41E7CB8CF0087D8AC /* BowlingScoreTable.m */; };
+		876EEE6A1E8227AB00BA4A97 /* light_wood_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 876EEE691E8227AB00BA4A97 /* light_wood_texture.png */; };
+		879E61481E845422000F8E2A /* dark_wood_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 879E61471E845422000F8E2A /* dark_wood_texture.png */; };
+		87A02AA91E7CD6840055563D /* FrameSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A02AA81E7CD6840055563D /* FrameSelectionView.m */; };
+		87A02AAB1E7CD72F0055563D /* FrameSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A02AAA1E7CD72F0055563D /* FrameSelectionView.xib */; };
+		87A02AAE1E7CD84B0055563D /* UIPopoverController+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A02AAD1E7CD84B0055563D /* UIPopoverController+iPhone.m */; };
+		87A9138B1E80CEA900DCB261 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A9138A1E80CEA900DCB261 /* GameManager.m */; };
+		87A9138D1E80D51400DCB261 /* load_view_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 87A9138C1E80D51400DCB261 /* load_view_texture.png */; };
+		87F596071E7F558300EFC08F /* PreferencesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F596061E7F558300EFC08F /* PreferencesHandler.m */; };
+		87F5960C1E7F61B700EFC08F /* LoadGameTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F5960B1E7F61B700EFC08F /* LoadGameTable.m */; };
+		87F596181E7F846100EFC08F /* button_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F596171E7F846100EFC08F /* button_texture.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		874175DC1E7CAC2B0087D8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 874175AE1E7CAC2B0087D8AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 874175B51E7CAC2B0087D8AC;
+			remoteInfo = "Bowling Score Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		873651871E7EF62400D60210 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
+		873651911E7F03DF00D60210 /* popview_wood_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popview_wood_texture.png; sourceTree = "<group>"; };
+		873651971E7F14E800D60210 /* NavBar-Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Wood.png"; sourceTree = "<group>"; };
+		873651981E7F14E800D60210 /* NavBar-Wood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Wood@2x.png"; sourceTree = "<group>"; };
+		873BD7AF1E7D973D008BDFE1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		873BD7B01E7D973D008BDFE1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		873BD7B21E7E3DBD008BDFE1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		874175B61E7CAC2B0087D8AC /* Bowling Score Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bowling Score Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		874175B91E7CAC2B0087D8AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		874175BB1E7CAC2B0087D8AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		874175BD1E7CAC2B0087D8AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		874175C11E7CAC2B0087D8AC /* Bowling Score Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bowling Score Calculator-Info.plist"; sourceTree = "<group>"; };
+		874175C31E7CAC2B0087D8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		874175C51E7CAC2B0087D8AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		874175C71E7CAC2B0087D8AC /* Bowling Score Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bowling Score Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		874175C81E7CAC2B0087D8AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		874175C91E7CAC2B0087D8AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		874175CC1E7CAC2B0087D8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		874175D71E7CAC2B0087D8AC /* Bowling Score CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bowling Score CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		874175D81E7CAC2B0087D8AC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		874175E01E7CAC2B0087D8AC /* Bowling Score CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bowling Score CalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		874175E21E7CAC2B0087D8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		874175E41E7CAC2B0087D8AC /* Bowling_Score_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bowling_Score_CalculatorTests.m; sourceTree = "<group>"; };
+		874175F31E7CB8CF0087D8AC /* BowlingScoreTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BowlingScoreTable.h; sourceTree = "<group>"; };
+		874175F41E7CB8CF0087D8AC /* BowlingScoreTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BowlingScoreTable.m; sourceTree = "<group>"; };
+		876EEE691E8227AB00BA4A97 /* light_wood_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_wood_texture.png; sourceTree = "<group>"; };
+		879E61471E845422000F8E2A /* dark_wood_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_wood_texture.png; sourceTree = "<group>"; };
+		87A02AA71E7CD6840055563D /* FrameSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameSelectionView.h; sourceTree = "<group>"; };
+		87A02AA81E7CD6840055563D /* FrameSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameSelectionView.m; sourceTree = "<group>"; };
+		87A02AAA1E7CD72F0055563D /* FrameSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameSelectionView.xib; sourceTree = "<group>"; };
+		87A02AAC1E7CD84B0055563D /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		87A02AAD1E7CD84B0055563D /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
+		87A913891E80CEA900DCB261 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		87A9138A1E80CEA900DCB261 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		87A9138C1E80D51400DCB261 /* load_view_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_view_texture.png; sourceTree = "<group>"; };
+		87F596051E7F558300EFC08F /* PreferencesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesHandler.h; sourceTree = "<group>"; };
+		87F596061E7F558300EFC08F /* PreferencesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesHandler.m; sourceTree = "<group>"; };
+		87F5960A1E7F61B700EFC08F /* LoadGameTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadGameTable.h; sourceTree = "<group>"; };
+		87F5960B1E7F61B700EFC08F /* LoadGameTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadGameTable.m; sourceTree = "<group>"; };
+		87F596171E7F846100EFC08F /* button_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_texture.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		874175B31E7CAC2B0087D8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874175BC1E7CAC2B0087D8AC /* CoreGraphics.framework in Frameworks */,
+				874175BE1E7CAC2B0087D8AC /* UIKit.framework in Frameworks */,
+				874175BA1E7CAC2B0087D8AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874175D41E7CAC2B0087D8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874175D91E7CAC2B0087D8AC /* XCTest.framework in Frameworks */,
+				874175DB1E7CAC2B0087D8AC /* UIKit.framework in Frameworks */,
+				874175DA1E7CAC2B0087D8AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		874175AD1E7CAC2B0087D8AC = {
+			isa = PBXGroup;
+			children = (
+				873BD7B21E7E3DBD008BDFE1 /* Media.xcassets */,
+				874175BF1E7CAC2B0087D8AC /* Bowling Score Calculator */,
+				874175DE1E7CAC2B0087D8AC /* Bowling Score CalculatorTests */,
+				874175B81E7CAC2B0087D8AC /* Frameworks */,
+				874175B71E7CAC2B0087D8AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		874175B71E7CAC2B0087D8AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				874175B61E7CAC2B0087D8AC /* Bowling Score Calculator.app */,
+				874175D71E7CAC2B0087D8AC /* Bowling Score CalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		874175B81E7CAC2B0087D8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				874175B91E7CAC2B0087D8AC /* Foundation.framework */,
+				874175BB1E7CAC2B0087D8AC /* CoreGraphics.framework */,
+				874175BD1E7CAC2B0087D8AC /* UIKit.framework */,
+				874175D81E7CAC2B0087D8AC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		874175BF1E7CAC2B0087D8AC /* Bowling Score Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				874175C81E7CAC2B0087D8AC /* AppDelegate.h */,
+				874175C91E7CAC2B0087D8AC /* AppDelegate.m */,
+				874175CB1E7CAC2B0087D8AC /* Main.storyboard */,
+				87F596091E7F611700EFC08F /* Resources */,
+				87F596081E7F610800EFC08F /* View Controllers */,
+				87A02A9E1E7CCE990055563D /* Views */,
+				87A02A9A1E7CCE100055563D /* Classes */,
+				874175C01E7CAC2B0087D8AC /* Supporting Files */,
+			);
+			path = "Bowling Score Calculator";
+			sourceTree = "<group>";
+		};
+		874175C01E7CAC2B0087D8AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				874175C11E7CAC2B0087D8AC /* Bowling Score Calculator-Info.plist */,
+				874175C21E7CAC2B0087D8AC /* InfoPlist.strings */,
+				874175C51E7CAC2B0087D8AC /* main.m */,
+				874175C71E7CAC2B0087D8AC /* Bowling Score Calculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		874175DE1E7CAC2B0087D8AC /* Bowling Score CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				874175E41E7CAC2B0087D8AC /* Bowling_Score_CalculatorTests.m */,
+				874175DF1E7CAC2B0087D8AC /* Supporting Files */,
+			);
+			path = "Bowling Score CalculatorTests";
+			sourceTree = "<group>";
+		};
+		874175DF1E7CAC2B0087D8AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				874175E01E7CAC2B0087D8AC /* Bowling Score CalculatorTests-Info.plist */,
+				874175E11E7CAC2B0087D8AC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87A02A9A1E7CCE100055563D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				87A02AAC1E7CD84B0055563D /* UIPopoverController+iPhone.h */,
+				87A02AAD1E7CD84B0055563D /* UIPopoverController+iPhone.m */,
+				873BD7AF1E7D973D008BDFE1 /* Game.h */,
+				873BD7B01E7D973D008BDFE1 /* Game.m */,
+				87A913891E80CEA900DCB261 /* GameManager.h */,
+				87A9138A1E80CEA900DCB261 /* GameManager.m */,
+				87F596051E7F558300EFC08F /* PreferencesHandler.h */,
+				87F596061E7F558300EFC08F /* PreferencesHandler.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		87A02A9E1E7CCE990055563D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87A02AAA1E7CD72F0055563D /* FrameSelectionView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		87F596081E7F610800EFC08F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				874175F31E7CB8CF0087D8AC /* BowlingScoreTable.h */,
+				874175F41E7CB8CF0087D8AC /* BowlingScoreTable.m */,
+				87F5960A1E7F61B700EFC08F /* LoadGameTable.h */,
+				87F5960B1E7F61B700EFC08F /* LoadGameTable.m */,
+				87A02AA71E7CD6840055563D /* FrameSelectionView.h */,
+				87A02AA81E7CD6840055563D /* FrameSelectionView.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		87F596091E7F611700EFC08F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				873651871E7EF62400D60210 /* sphere.png */,
+				876EEE691E8227AB00BA4A97 /* light_wood_texture.png */,
+				879E61471E845422000F8E2A /* dark_wood_texture.png */,
+				873651911E7F03DF00D60210 /* popview_wood_texture.png */,
+				873651971E7F14E800D60210 /* NavBar-Wood.png */,
+				873651981E7F14E800D60210 /* NavBar-Wood@2x.png */,
+				87F596171E7F846100EFC08F /* button_texture.png */,
+				87A9138C1E80D51400DCB261 /* load_view_texture.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		874175B51E7CAC2B0087D8AC /* Bowling Score Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 874175E81E7CAC2B0087D8AC /* Build configuration list for PBXNativeTarget "Bowling Score Calculator" */;
+			buildPhases = (
+				874175B21E7CAC2B0087D8AC /* Sources */,
+				874175B31E7CAC2B0087D8AC /* Frameworks */,
+				874175B41E7CAC2B0087D8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bowling Score Calculator";
+			productName = "Bowling Score Calculator";
+			productReference = 874175B61E7CAC2B0087D8AC /* Bowling Score Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		874175D61E7CAC2B0087D8AC /* Bowling Score CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 874175EB1E7CAC2B0087D8AC /* Build configuration list for PBXNativeTarget "Bowling Score CalculatorTests" */;
+			buildPhases = (
+				874175D31E7CAC2B0087D8AC /* Sources */,
+				874175D41E7CAC2B0087D8AC /* Frameworks */,
+				874175D51E7CAC2B0087D8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				874175DD1E7CAC2B0087D8AC /* PBXTargetDependency */,
+			);
+			name = "Bowling Score CalculatorTests";
+			productName = "Bowling Score CalculatorTests";
+			productReference = 874175D71E7CAC2B0087D8AC /* Bowling Score CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		874175AE1E7CAC2B0087D8AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "dosdude1 Apps";
+				TargetAttributes = {
+					874175B51E7CAC2B0087D8AC = {
+						DevelopmentTeam = C9R8PL7T6L;
+					};
+					874175D61E7CAC2B0087D8AC = {
+						TestTargetID = 874175B51E7CAC2B0087D8AC;
+					};
+				};
+			};
+			buildConfigurationList = 874175B11E7CAC2B0087D8AC /* Build configuration list for PBXProject "Bowling Score Calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 874175AD1E7CAC2B0087D8AC;
+			productRefGroup = 874175B71E7CAC2B0087D8AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				874175B51E7CAC2B0087D8AC /* Bowling Score Calculator */,
+				874175D61E7CAC2B0087D8AC /* Bowling Score CalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		874175B41E7CAC2B0087D8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8736519A1E7F14E800D60210 /* NavBar-Wood@2x.png in Resources */,
+				873651941E7F03DF00D60210 /* popview_wood_texture.png in Resources */,
+				873651991E7F14E800D60210 /* NavBar-Wood.png in Resources */,
+				873BD7B31E7E3DBD008BDFE1 /* Media.xcassets in Resources */,
+				876EEE6A1E8227AB00BA4A97 /* light_wood_texture.png in Resources */,
+				879E61481E845422000F8E2A /* dark_wood_texture.png in Resources */,
+				874175C41E7CAC2B0087D8AC /* InfoPlist.strings in Resources */,
+				87A9138D1E80D51400DCB261 /* load_view_texture.png in Resources */,
+				873651881E7EF62400D60210 /* sphere.png in Resources */,
+				87F596181E7F846100EFC08F /* button_texture.png in Resources */,
+				874175CD1E7CAC2B0087D8AC /* Main.storyboard in Resources */,
+				87A02AAB1E7CD72F0055563D /* FrameSelectionView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874175D51E7CAC2B0087D8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874175E31E7CAC2B0087D8AC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		874175B21E7CAC2B0087D8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874175F51E7CB8CF0087D8AC /* BowlingScoreTable.m in Sources */,
+				87A02AA91E7CD6840055563D /* FrameSelectionView.m in Sources */,
+				874175CA1E7CAC2B0087D8AC /* AppDelegate.m in Sources */,
+				873BD7B11E7D973D008BDFE1 /* Game.m in Sources */,
+				87A9138B1E80CEA900DCB261 /* GameManager.m in Sources */,
+				87F5960C1E7F61B700EFC08F /* LoadGameTable.m in Sources */,
+				87A02AAE1E7CD84B0055563D /* UIPopoverController+iPhone.m in Sources */,
+				874175C61E7CAC2B0087D8AC /* main.m in Sources */,
+				87F596071E7F558300EFC08F /* PreferencesHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874175D31E7CAC2B0087D8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874175E51E7CAC2B0087D8AC /* Bowling_Score_CalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		874175DD1E7CAC2B0087D8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 874175B51E7CAC2B0087D8AC /* Bowling Score Calculator */;
+			targetProxy = 874175DC1E7CAC2B0087D8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		874175C21E7CAC2B0087D8AC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874175C31E7CAC2B0087D8AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		874175CB1E7CAC2B0087D8AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874175CC1E7CAC2B0087D8AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		874175E11E7CAC2B0087D8AC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874175E21E7CAC2B0087D8AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		874175E61E7CAC2B0087D8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		874175E71E7CAC2B0087D8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		874175E91E7CAC2B0087D8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Bowling Score Calculator/Bowling Score Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		874175EA1E7CAC2B0087D8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Bowling Score Calculator/Bowling Score Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		874175EC1E7CAC2B0087D8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bowling Score Calculator.app/Bowling Score Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bowling Score CalculatorTests/Bowling Score CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		874175ED1E7CAC2B0087D8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bowling Score Calculator.app/Bowling Score Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Bowling Score CalculatorTests/Bowling Score CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		874175B11E7CAC2B0087D8AC /* Build configuration list for PBXProject "Bowling Score Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				874175E61E7CAC2B0087D8AC /* Debug */,
+				874175E71E7CAC2B0087D8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		874175E81E7CAC2B0087D8AC /* Build configuration list for PBXNativeTarget "Bowling Score Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				874175E91E7CAC2B0087D8AC /* Debug */,
+				874175EA1E7CAC2B0087D8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		874175EB1E7CAC2B0087D8AC /* Build configuration list for PBXNativeTarget "Bowling Score CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				874175EC1E7CAC2B0087D8AC /* Debug */,
+				874175ED1E7CAC2B0087D8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 874175AE1E7CAC2B0087D8AC /* Project object */;
+}

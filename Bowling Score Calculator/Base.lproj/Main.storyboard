@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="Bl6-eT-f8u">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Bowling Score Table - Bowling Score Calculator-->
+        <scene sceneID="lgu-mD-8f9">
+            <objects>
+                <tableViewController id="c0v-Vq-fTD" customClass="BowlingScoreTable" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="AAR-7l-KjR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="VMP-15-46P" detailTextLabel="bWr-S2-GE2" style="IBUITableViewCellStyleValue1" id="ixb-UW-oAB">
+                                <rect key="frame" x="0.0" y="22" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ixb-UW-oAB" id="4c9-1l-jQp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VMP-15-46P">
+                                            <rect key="frame" x="10" y="17" width="39" height="26"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bWr-S2-GE2">
+                                            <rect key="frame" x="241" y="12" width="69" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c0v-Vq-fTD" id="Yhh-jN-Ht4"/>
+                            <outlet property="delegate" destination="c0v-Vq-fTD" id="oUy-3n-OIy"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Clear" width="55" id="h2i-pM-5D9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clearAllFrames:" destination="c0v-Vq-fTD" id="N7x-wI-6EQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Mj7-ym-gRV"/>
+                        <barButtonItem title="Load" width="55" id="5ul-FZ-vNO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showLoadGameView:" destination="c0v-Vq-fTD" id="iuP-OY-BWR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Save" width="55" id="XEE-IS-Fvj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveCurrentGame:" destination="c0v-Vq-fTD" id="56n-Y3-1DX"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Bowling Score Calculator" id="bhE-Nm-Ow4"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clearBarButton" destination="h2i-pM-5D9" id="hJo-RS-fud"/>
+                        <outlet property="loadBarButton" destination="5ul-FZ-vNO" id="kJh-HA-ky9"/>
+                        <outlet property="saveBarButton" destination="XEE-IS-Fvj" id="Y2z-8g-pdT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKI-YT-ZiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="226"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t4i-hT-f1w">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Bl6-eT-f8u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="V70-6T-u3C">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c0v-Vq-fTD" kind="relationship" relationship="rootViewController" id="uiJ-lN-RpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6o-B0-HVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="219"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
