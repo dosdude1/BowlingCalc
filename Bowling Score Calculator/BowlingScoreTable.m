@@ -28,13 +28,32 @@
 {
     [super viewDidLoad];
     prefs=[PreferencesHandler sharedInstance];
-    IOS_VERSION=[[[UIDevice currentDevice] systemVersion] floatValue];
+    //IOS_VERSION=[[[UIDevice currentDevice] systemVersion] floatValue];
+    
+    if (@available(iOS 15.0, *)) {
+        UINavigationBarAppearance *appearance = [self.navigationController.navigationBar standardAppearance];
+        [appearance setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"]];
+        [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        [appearance setShadowColor:[UIColor whiteColor]];
+        [self.navigationController.navigationBar setStandardAppearance:appearance];
+        [self.navigationController.navigationBar setCompactAppearance:appearance];
+        [self.navigationController.navigationBar setScrollEdgeAppearance:appearance];
+        [self.navigationController.navigationBar setOverrideUserInterfaceStyle:UIUserInterfaceStyleDark];
+    }
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    [self.navigationItem setTitle:@"Bowling Score Calculator"];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"NavBar-Wood"] resizableImageWithCapInsets:UIEdgeInsetsMake(5.0, 0.0, 5.0, 0.0) resizingMode:UIImageResizingModeStretch] forBarMetrics: UIBarMetricsDefault];
     
     self.tableView.allowsSelection = NO;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_wood_texture"]];
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"NavBar-Wood"] resizableImageWithCapInsets:UIEdgeInsetsMake(-20, 0, 0, 0)] forBarMetrics: UIBarMetricsDefault];
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 10)];
     self.tableView.tableFooterView.backgroundColor=[UIColor clearColor];
+    if (@available(iOS 15.0, *)) {
+        [self.tableView setSectionHeaderTopPadding:0.0f];
+    }
+    
     [self setUpToolbar];
     
     if ([prefs shouldAutoReloadGame])
@@ -123,12 +142,40 @@
 //Set up the bottom toolbar
 -(void)setUpToolbar
 {
+    
+    if (@available(iOS 15.0, *)) {
+        UIToolbarAppearance *appearance = [self.navigationController.toolbar standardAppearance];
+        [appearance setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"]];
+        [appearance setShadowColor:[UIColor whiteColor]];
+        //[appearance configureWithTransparentBackground];
+        [self.navigationController.toolbar setStandardAppearance:appearance];
+        [self.navigationController.toolbar setCompactAppearance:appearance];
+        [self.navigationController.toolbar setScrollEdgeAppearance:appearance];
+    }
+    
     self.navigationController.toolbarHidden=NO;
     [self.navigationController.toolbar setTranslucent:NO];
-    [self.navigationController.toolbar setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"] forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [self.saveBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [self.loadBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [self.clearBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [self.navigationController.toolbar setBackgroundImage:[[UIImage imageNamed:@"NavBar-Wood"] resizableImageWithCapInsets:UIEdgeInsetsMake(5.0, 0.0, 5.0, 0.0) resizingMode:UIImageResizingModeStretch] forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    
+    
+    UIBarButtonItem *clearBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(clearAllFrames)];
+    [clearBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] stretchableImageWithLeftCapWidth:0 topCapHeight:0] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [clearBarButton setTintColor:[UIColor whiteColor]];
+    
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    UIBarButtonItem *loadBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Load" style:UIBarButtonItemStyleBordered target:self action:@selector(showLoadGameView)];
+    [loadBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] stretchableImageWithLeftCapWidth:0 topCapHeight:0] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [loadBarButton setTintColor:[UIColor whiteColor]];
+    
+    //UIBarButtonItem *spacer2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    //[spacer2 setWidth:15];
+    
+    UIBarButtonItem *saveBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveCurrentGame)];
+    [saveBarButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] stretchableImageWithLeftCapWidth:0 topCapHeight:0] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [saveBarButton setTintColor:[UIColor whiteColor]];
+    
+    [self setToolbarItems:[NSArray arrayWithObjects:clearBarButton, spacer, loadBarButton, saveBarButton, nil]];
 }
 
 //Return formatted score representation for use as the button text
@@ -200,11 +247,18 @@
     cell.layer.cornerRadius=8;
     cell.clipsToBounds=YES;
     cell.textLabel.text=[NSString stringWithFormat:@"%d", (int)indexPath.section+1];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:21.0]];
     
     cell.detailTextLabel.text=[NSString stringWithFormat:@"%d", [game getRunningTotalForFrame:indexPath.section]];
     cell.detailTextLabel.backgroundColor=[UIColor clearColor];
+    cell.detailTextLabel.textColor = [UIColor blackColor];
+    [cell.detailTextLabel setFont:[UIFont boldSystemFontOfSize:26.0]];
     cell.textLabel.backgroundColor=[UIColor clearColor];
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -230,7 +284,7 @@
 {
     if (!frameSelectionView)
     {
-        frameSelectionView=[[FrameSelectionView alloc] initWithNibName:@"FrameSelectionView" bundle:nil];
+        frameSelectionView=[[FrameSelectionView alloc] init];
         frameSelectionView.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"popview_wood_texture"]];
         frameSelectionView.delegate=self;
     }
@@ -243,18 +297,34 @@
     buttonRect.origin=buttonPosition;
     if (!popController)
     {
-        popController=[[UIPopoverController alloc]initWithContentViewController:frameSelectionView];
+        UIViewController *containerVC = [[UIViewController alloc] init];
+        [containerVC.view addSubview:frameSelectionView.view];
+        [containerVC.view setFrame:frameSelectionView.view.frame];
+        [containerVC addChildViewController:frameSelectionView];
+        
+        if (@available(iOS 13.0, *)) {
+            UILayoutGuide* guide = containerVC.view.safeAreaLayoutGuide;
+            frameSelectionView.view.translatesAutoresizingMaskIntoConstraints = NO;
+            [frameSelectionView.view.leadingAnchor constraintEqualToAnchor:guide.leadingAnchor].active = YES;
+            [frameSelectionView.view.trailingAnchor constraintEqualToAnchor:guide.trailingAnchor].active = YES;
+            [frameSelectionView.view.topAnchor constraintEqualToAnchor:guide.topAnchor].active = YES;
+            [frameSelectionView.view.bottomAnchor constraintEqualToAnchor:guide.bottomAnchor].active = YES;
+            [containerVC.view layoutIfNeeded];
+        }
+        
+        popController=[[UIPopoverController alloc] initWithContentViewController:containerVC];
         popController.popoverContentSize=CGSizeMake(frameSelectionView.view.frame.size.width, frameSelectionView.view.frame.size.height);
         popController.delegate=self;
-        if (IOS_VERSION >= 7.0)
+        if (@available(iOS 7.0, *))
         {
             popController.backgroundColor=[UIColor colorWithRed:194.0/255.0 green:128.0/255.0 blue:70.0/255.0 alpha:1.0];
         }
+        
     }
     [frameSelectionView setInputs:[game getValidInputsForRoll:selectedButton+1 atFrame:selectedRow]];
     [self setViewAlpha:0.6f withAnimationDuration:0.07];
     [popController presentPopoverFromRect:buttonRect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionUp animated:YES];
-    if (IOS_VERSION >= 7.0)
+    if (@available(iOS 7.0, *))
     {
         if ([popController popoverArrowDirection] == UIPopoverArrowDirectionUp)
         {
@@ -312,7 +382,7 @@
 }
 
 //Initialize and/or show the load game view
-- (IBAction)showLoadGameView:(id)sender
+- (void)showLoadGameView
 {
     if (!loadGameTable)
     {
@@ -320,16 +390,26 @@
         loadGameTable.delegate=self;
         loadGameTableNavController = [[UINavigationController alloc] initWithRootViewController:loadGameTable];
         loadGameTableNavController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        
+        if (@available(iOS 15.0, *)) {
+            UINavigationBarAppearance *appearance = [loadGameTableNavController.navigationBar standardAppearance];
+            [appearance setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"]];
+            [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+            [loadGameTableNavController.navigationBar setStandardAppearance:appearance];
+            [loadGameTableNavController.navigationBar setCompactAppearance:appearance];
+            [loadGameTableNavController.navigationBar setScrollEdgeAppearance:appearance];
+        }
+        
         [loadGameTableNavController.navigationBar setBarStyle:UIBarStyleBlack];
         [loadGameTableNavController.navigationBar setTranslucent:NO];
-        [loadGameTableNavController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"NavBar-Wood"] resizableImageWithCapInsets:UIEdgeInsetsMake(-20, 0, 0, 0)] forBarMetrics: UIBarMetricsDefault];
+        [loadGameTableNavController.navigationBar setBackgroundImage:[[UIImage imageNamed:@"NavBar-Wood"] resizableImageWithCapInsets:UIEdgeInsetsMake(5.0, 0.0, 5.0, 0.0) resizingMode:UIImageResizingModeStretch] forBarMetrics: UIBarMetricsDefault];
         
     }
     [self presentViewController:loadGameTableNavController animated:YES completion:nil];
 }
 
 //Show dialog for saving the current game
-- (IBAction)saveCurrentGame:(id)sender
+- (void)saveCurrentGame
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save Game" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
     [alert setTag:100];
@@ -366,7 +446,7 @@
 }
 
 //Clears the game
-- (IBAction)clearAllFrames:(id)sender
+- (void)clearAllFrames
 {
     [prefs setShouldAutoReloadGame:NO];
     [game initEmptyGame];

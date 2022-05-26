@@ -18,10 +18,6 @@
 @property (nonatomic, strong) id <FrameSelectionDelegate> delegate;
 
 
-/*! Interface builder method */
-- (IBAction)selectValue:(id)sender;
-
-
 /*!
  Set the valid inputs of the view
  

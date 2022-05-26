@@ -45,7 +45,7 @@
                                    target:self
                                    action:@selector(dismissModal:)];
     [closeButton setTintColor:[UIColor whiteColor]];
-    [closeButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [closeButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] stretchableImageWithLeftCapWidth:0 topCapHeight:0] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.navigationItem setRightBarButtonItem:closeButton];
     editButton = [[UIBarButtonItem alloc]
                                     initWithTitle:@"Edit"
@@ -53,7 +53,7 @@
                                     target:self
                                     action:@selector(toggleEditing:)];
     [editButton setTintColor:[UIColor whiteColor]];
-    [editButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] resizableImageWithCapInsets:UIEdgeInsetsMake(9, 9, 9, 9)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [editButton setBackgroundImage:[[UIImage imageNamed:@"button_texture"] stretchableImageWithLeftCapWidth:0 topCapHeight:0] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.navigationItem setLeftBarButtonItem:editButton];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"load_view_texture"]];
     self.tableView.tableFooterView = [UIView new];

@@ -12,7 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    if (!mainNavController) {
+        BowlingScoreTable *mainTableView = [[BowlingScoreTable alloc] init];
+        mainNavController = [[UINavigationController alloc] initWithRootViewController:mainTableView];
+    }
+    [self.window setRootViewController:mainNavController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

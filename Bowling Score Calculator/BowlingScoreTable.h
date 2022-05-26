@@ -25,14 +25,6 @@
     int selectedRow;
     int selectedButton;
     UINavigationController *loadGameTableNavController;
-    float IOS_VERSION;
 }
 
-/*! Interface builder properties and methods */
-- (IBAction)showLoadGameView:(id)sender;
-- (IBAction)saveCurrentGame:(id)sender;
-- (IBAction)clearAllFrames:(id)sender;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveBarButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *loadBarButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *clearBarButton;
 @end

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BowlingScoreTable.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    UINavigationController *mainNavController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

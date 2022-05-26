@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 284, 98)];
+    [self.view setTag:1000];
+    [self setupButtons];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,8 +37,106 @@
     
 }
 
+-(void)setupButtons {
+    UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(9, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"1" forState:UIControlStateNormal];
+    [b setTag:0];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(55, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"2" forState:UIControlStateNormal];
+    [b setTag:1];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(101, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"3" forState:UIControlStateNormal];
+    [b setTag:2];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(147, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"4" forState:UIControlStateNormal];
+    [b setTag:3];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(193, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"5" forState:UIControlStateNormal];
+    [b setTag:4];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(239, 8, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"6" forState:UIControlStateNormal];
+    [b setTag:5];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(9, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"7" forState:UIControlStateNormal];
+    [b setTag:6];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(55, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"8" forState:UIControlStateNormal];
+    [b setTag:7];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(101, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"9" forState:UIControlStateNormal];
+    [b setTag:8];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(147, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"0" forState:UIControlStateNormal];
+    [b setTag:11];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(193, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"/" forState:UIControlStateNormal];
+    [b setTag:9];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+    
+    b = [[UIButton alloc] initWithFrame:CGRectMake(239, 54, 38, 38)];
+    [b addTarget:self action:@selector(selectValue:) forControlEvents:UIControlEventTouchUpInside];
+    [b setTitle:@"X" forState:UIControlStateNormal];
+    [b setTag:10];
+    [b setBackgroundImage:[UIImage imageNamed:@"sphere"] forState:UIControlStateNormal];
+    [b setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+    [self.view addSubview:b];
+}
+
 //Determine appropriate score value based on button tapped, and send result to delegate
-- (IBAction)selectValue:(id)sender
+- (void)selectValue:(id)sender
 {
     NSString *value=@"";
     switch ([sender tag])
