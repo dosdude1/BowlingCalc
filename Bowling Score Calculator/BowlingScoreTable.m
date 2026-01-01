@@ -34,7 +34,6 @@
         UINavigationBarAppearance *appearance = [self.navigationController.navigationBar standardAppearance];
         [appearance setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"]];
         [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-        [appearance setShadowColor:[UIColor whiteColor]];
         [self.navigationController.navigationBar setStandardAppearance:appearance];
         [self.navigationController.navigationBar setCompactAppearance:appearance];
         [self.navigationController.navigationBar setScrollEdgeAppearance:appearance];
@@ -146,8 +145,6 @@
     if (@available(iOS 15.0, *)) {
         UIToolbarAppearance *appearance = [self.navigationController.toolbar standardAppearance];
         [appearance setBackgroundImage:[UIImage imageNamed:@"NavBar-Wood"]];
-        [appearance setShadowColor:[UIColor whiteColor]];
-        //[appearance configureWithTransparentBackground];
         [self.navigationController.toolbar setStandardAppearance:appearance];
         [self.navigationController.toolbar setCompactAppearance:appearance];
         [self.navigationController.toolbar setScrollEdgeAppearance:appearance];
@@ -246,10 +243,11 @@
     
     cell.layer.cornerRadius=8;
     cell.clipsToBounds=YES;
-    cell.textLabel.text=[NSString stringWithFormat:@"%d", (int)indexPath.section+1];
+    cell.textLabel.text=[NSString stringWithFormat:@"%ld", indexPath.section+1];
     [cell.textLabel setFont:[UIFont systemFontOfSize:21.0]];
+    cell.textLabel.textColor = [UIColor blackColor];
     
-    cell.detailTextLabel.text=[NSString stringWithFormat:@"%d", [game getRunningTotalForFrame:indexPath.section]];
+    cell.detailTextLabel.text=[NSString stringWithFormat:@"%d", [game getRunningTotalForFrame:(int)indexPath.section]];
     cell.detailTextLabel.backgroundColor=[UIColor clearColor];
     cell.detailTextLabel.textColor = [UIColor blackColor];
     [cell.detailTextLabel setFont:[UIFont boldSystemFontOfSize:26.0]];

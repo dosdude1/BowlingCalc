@@ -471,7 +471,7 @@
 				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Bowling Score Calculator/Bowling Score Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dosdude1.Bowling-Score-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -490,7 +490,7 @@
 				GCC_PREFIX_HEADER = "Bowling Score Calculator/Bowling Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Bowling Score Calculator/Bowling Score Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dosdude1.Bowling-Score-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
